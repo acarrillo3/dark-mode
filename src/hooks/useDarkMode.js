@@ -1,6 +1,5 @@
-import { useLocalStorage } from './useLocalStorage';
+import useLocalStorage from './useLocalStorage';
 import {useEffect} from 'react';
-import { generateTypesForGlobal } from 'typescript';
 
 const useDarkMode = (key, initialValue) => {
     const [darkModeEnabled, setDarkModeEnabled] = useLocalStorage(key, initialValue);
@@ -19,6 +18,6 @@ const useDarkMode = (key, initialValue) => {
         }
     }, [darkModeEnabled]);
     return [darkModeEnabled, setDarkModeEnabled, toggleDarkMode];
-}
+};
 
 export default useDarkMode;
